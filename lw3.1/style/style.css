@@ -15,7 +15,7 @@ body {
   justify-content: space-between;
 }
 
-.logo {
+.header-logo {
   margin-top: 6.12px;
   height: 36.23px;
   display: flex;
@@ -43,7 +43,7 @@ body {
   flex-direction: row;
 }
 
-.menu__item {
+.header-menu__item {
   font-family: Rubik;
   font-style: normal;
   font-weight: normal;
@@ -54,15 +54,15 @@ body {
   margin-top: 14px;
 }
 
-.menu__item:hover {
+.header-menu__item:hover {
   cursor: pointer;
 }
 
-.menu__item:last-child {
+.header-menu__item:last-child {
   margin-right: 0;
 }
 
-.account-menu__item {
+.header-account-menu__item {
   font-family: Rubik;
   font-style: normal;
   font-weight: 500;
@@ -71,17 +71,17 @@ body {
   margin-top: 14px;
 }
 
-.account-menu__item:hover {
+.header-account-menu__item:hover {
   cursor: pointer;
 }
 
-.account-menu__item:last-child:hover {
+.header-account-menu__item:last-child:hover {
   background: #F53855;
   color: #fff;
   transition-duration: 0.5s;
 }
 
-.account-menu__item:last-child {
+.header-account-menu__item:last-child {
   margin-left: 30px;
   margin-top: 0px;
   padding: 13px 45px;
@@ -90,7 +90,7 @@ body {
   transition-duration: 0.5s;
 }
 
-.account-menu__item--color_red {
+.header-account-menu__item--color_red {
   color: #F53855;
 }
 
@@ -354,6 +354,13 @@ body {
 .footer {
   margin-top: 97px;
   margin-left: 150px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-company-info-logo {
+  margin-top: 6.12px;
+  height: 36.23px;
   display: flex;
   flex-direction: row;
 }
