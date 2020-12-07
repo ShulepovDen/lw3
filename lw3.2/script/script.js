@@ -22,14 +22,10 @@ window.onload = function() {
     }
   }
 
-  function deleteFromElements(element) {
-    var elementPosition = storeElements.indexOf(element);
+  function deleteFromElements(elements, element) {
+    var elementPosition = elements.indexOf(element);
     if (elementPosition > -1) {
-      storeElements.splice(elementPosition, 1);
-    }
-    elementPosition = listingElements.indexOf(element);
-    if (elementPosition > -1) {
-      listingElements.splice(elementPosition, 1);
+      elements.splice(elementPosition, 1);
     }
   }
 
@@ -53,7 +49,7 @@ window.onload = function() {
   }
 
   function sortElements() {
-    if (isInAscending === true) {
+    if (isInAscending == true) {
       listingElements.sort(sortIndescending);
       storeElements.sort(sortIndescending);
       isInAscending = false;
@@ -116,10 +112,12 @@ window.onload = function() {
 
   deleteButton.onclick = function() {
     var selectedOption = document.querySelector('.store-select option:checked');
-    if (selectedOption === null) {
+    if (selectedOption !== null) {
+      deleteFromElements(storeElements, selectedOption.innerText);
+    } else {
       selectedOption = document.querySelector('.listing-select option:checked');
+      deleteFromElements(listingElements, selectedOption.innerText);
     }
-    deleteFromElements(selectedOption.innerText);
     updateUI();
   }
 
