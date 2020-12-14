@@ -49,7 +49,7 @@ window.onload = function() {
   }
 
   function sortElements() {
-    if (isInAscending == true) {
+    if (isInAscending) {
       listingElements.sort(sortIndescending);
       storeElements.sort(sortIndescending);
       isInAscending = false;
